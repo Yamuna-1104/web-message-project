@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Page</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", cursive;
+            text-align: center;
+            margin-top: 100x;
+            background-color: #f5f5f5;
+        }
+        /* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    margin: 15% auto;
+    border-radius: 10px;
+}
+h2 {
+    color: white;
+    font-family:cursive;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff4081,
+                 0 0 10px #ff4081,
+                 0 0 20px #ff4081;
+}
+        .box {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: green;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: red;
+            color: white;
+        }
+
+        #gif {
+            display: none;
+            margin-top: 20px;
+        }
+
+p{
+    color: rgb(6, 5, 5);
+    font-family:cursive;
+    font-size: 20px;
+    text-align: center;
+    
+}
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Hello My Love</h2>
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWhnZjN5bzZyN2wya2xiemZseGltcDZ1cHN0eTFydjQ1MHl6dDI3aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/25688FI5AUUVf04upZ/giphy.gif" width="200">
+        <p>Do you Miss me??</p>
+
+    <button id="yesBtn" onclick="showGif()">Yes</button>
+    <button id="noBtn" onclick="openPopup()">No</button>
+    </div>
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p>I know 😄 you should say YES!</p>
+        <button onclick="closePopup()">Close</button>
+        
+    </div>
+</div>
+    <script>
+        
+function showGif() {
+    document.getElementById("gif").style.display = "block";
+}
+
+// Open popup when NO clicked
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+    
+}
+
+// Close popup + change button
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+
+    let noBtn = document.getElementById("noBtn");
+    noBtn.innerText = "Yes 😄";
+    noBtn.style.backgroundColor = "green";
+}
+
+
+</script>
+<div id="gif">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZqYmw0cGg0eXd5eTN5YnVnbTNvdmw1MmtwaTR2enBxZ3pnMmJtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vY2fNDZqwtWQ48YoZ9/giphy.gif" width="200">
+    </div>
+
+
+<script>
+let isYes = true;
+
+function showGif() {
+    // Show GIF
+    document.getElementById("gif").style.display = "block";
+
+    
+}
+
+
+</script>
+
+
+</body>
+</html>
